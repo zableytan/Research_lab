@@ -31,7 +31,8 @@ $offset_requests = $stmt->fetchAll();
         <div class="card-body">
             <div class="row">
                 <div class="col-md-2">
-                    <img src="../assets/images/default-avatar.svg" alt="Profile" class="img-fluid rounded-circle">
+                    <img src="../<?php echo isset($staff['photo_path']) ? htmlspecialchars($staff['photo_path']) : 'assets/images/default-avatar.svg'; ?>" 
+                         alt="Profile" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
                 </div>
                 <div class="col-md-10">
                     <h3><?php echo htmlspecialchars($staff['full_name']); ?></h3>
